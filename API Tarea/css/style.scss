@@ -1,0 +1,153 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  
+  header {
+    width: 100%;
+    background-color: #333030;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    .titulo-pagina {
+        margin: 0;
+        margin-left: 10px;
+        font-weight: 600;
+        color: #ffffffdb;
+        font-size: 40px;
+      }
+
+    #logo-Libro {
+        width: 5%;
+      }
+
+      .logo__Menu {
+        position: absolute;
+        top: 0.6rem; 
+        left: 1rem;
+        width: 3%; 
+        cursor: pointer;
+        padding: .3rem;
+        box-shadow: 0px .25rem .5rem rgba(0, 0, 0, 0.7); 
+        background-color: rgb(255, 255, 255);
+        
+    }
+
+  }
+
+  .menu__Lista{
+    width: 25%;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    left: -50%;
+    top: 0.6rem;
+    box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+
+    &.show{
+        left:10%; 
+     }
+}
+
+  .search-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.8rem;
+
+    input{
+        padding: .6rem;
+        width: 10rem;
+        margin-right: 1.6rem;
+        border-radius: 1.4rem;
+    }
+
+    #search-button{
+        padding: .6rem;
+        width: 5rem;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+  }
+
+  .show-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .show-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .show-name {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+    text-transform: capitalize;
+  }
+
+  .show-card {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    gap: 20px; 
+    min-height: 160px; 
+  }
+  
+  .show-image-container {
+    flex-shrink: 0;
+  }
+  
+  .show-image {
+    width: 96px;
+    height: 96px;
+  }
+
+  body .show-summary {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4rem;
+    max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  body .show-genres,
+  body .show-premiered {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0.2rem 0;
+  }
+  
+  
+}
